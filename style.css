@@ -1,0 +1,72 @@
+body
+{
+    background-size: cover;
+}
+.search_div
+{
+    border-radius: 30px;
+    width: 600px;
+    height: 40px;
+    background-color: white;
+    padding-bottom: 10px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.459) ;
+    margin-top: 0cm;
+    padding-right: 10px;
+    
+}
+button
+{
+    border-radius: 30px;
+    background-image: url("search_icon.png");
+    height: 30px;
+    width: 30px;
+    background-size: cover;
+    background-color: white;
+    border: 0cap;
+    padding: 13px;
+    
+}
+input
+{
+    border: 0cap;
+    box-shadow: none;
+    outline: 0cap;
+    width: 525px;
+    height: 45px;
+    font-size: large;
+    font-family: "Inter", sans-serif;
+}
+.image
+{
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    background-size: cover;
+    border-radius: 5px;
+}
+#all_news
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10%;
+    
+}
+.news
+{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.633);
+    height: 200px;
+    width: 300px;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: "Raleway", sans-serif;
+
+}
+hr
+{
+   
+   
+    color: white;
+    
+}
