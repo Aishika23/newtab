@@ -48,7 +48,7 @@ fetch("https://newsdata.io/api/1/latest?apikey=pub_e24609fef8744f52abe106bced183
             }
         }
     
-        if(j==3)
+        if(j==5)
         {
             break;
         }

@@ -1,11 +1,14 @@
 body
 {
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .search_div
 {
     border-radius: 30px;
-    width: 600px;
+    width: 45%;
     height: 40px;
     background-color: white;
     padding-bottom: 10px;
@@ -31,7 +34,7 @@ input
     border: 0cap;
     box-shadow: none;
     outline: 0cap;
-    width: 525px;
+    width: 90%;
     height: 45px;
     font-size: large;
     font-family: "Inter", sans-serif;
@@ -49,18 +52,20 @@ input
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 10%;
+    padding: 5%;
+    width: 90%;
     
 }
 .news
 {
     color: white;
     background-color: rgba(0, 0, 0, 0.633);
-    height: 200px;
-    width: 300px;
+    height: 250px;
+    width: 200px;
     border-radius: 5px;
     padding: 5px;
     font-family: "Raleway", sans-serif;
+    text-align: center;
 
 }
 hr
@@ -69,4 +74,35 @@ hr
    
     color: white;
     
+}
+@media (max-width: 768px) {
+  body {
+    background-size: cover;
+    
+
+}
+#all_news
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10%;
+    gap: 20px;
+
+}
+ .news {
+        width: 90%;
+        max-width: 350px;
+        height: auto;
+        text-align: left;
+    }
+
+    .search_div {
+        width: 90%;
+        max-width: 600px;
+    }
+
+    input {
+        width: calc(100% - 50px);
+    }
 }
