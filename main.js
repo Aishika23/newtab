@@ -39,13 +39,14 @@ fetch("https://newsdata.io/api/1/latest?apikey=pub_e24609fef8744f52abe106bced183
             console.log(r.image_url);
             console.log(r.link);
             document.getElementById("image"+j).style.backgroundImage = `url(${r.image_url})`;
-            j++;
+            
             const news = document.getElementsByClassName("news");
 
-            news[j].onclick = () => 
+            news[j].onclick =() =>
             {
               window.open(r.link, "_blank");
             }
+            j++;
         }
     
         if(j==5)

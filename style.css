@@ -15,6 +15,11 @@ body
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.459) ;
     margin-top: 0cm;
     padding-right: 10px;
+    border: solid;
+    border-width: 3px;
+    border-color: white;
+
+    transition: border-color 0.2s ease-in-out;
     
 }
 button
@@ -52,14 +57,16 @@ input
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
     width: 90%;
+    
     
 }
 .news
 {
     color: white;
-    background-color: rgba(0, 0, 0, 0.633);
+    background-color: hsla(0, 0%, 0%, 0.633);
     height: 250px;
     width: 200px;
     border-radius: 5px;
@@ -67,13 +74,34 @@ input
     font-family: "Raleway", sans-serif;
     text-align: center;
 
+    transition: background-color 0.3s ease-in-out;
+    transition: height 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
+
 }
 hr
 {
-   
-   
     color: white;
+}
+h2
+{
+    width: 90%;
+     font-family: "Raleway", sans-serif;
+     text-align: left;
+     padding-left: 5%;
+     color: white;
+    text-decoration: underline white;
+}
+.search_div:hover
+{
     
+    border-color: black;
+}
+.news:hover
+{
+    background-color: hsla(0, 0%, 0%, 0.8);
+    
+    width: 215px;
 }
 @media (max-width: 768px) {
   body {
@@ -105,4 +133,14 @@ hr
     input {
         width: calc(100% - 50px);
     }
+    h2
+{
+    width: 90%;
+     font-family: "Raleway", sans-serif;
+     text-align: left;
+     padding-left: 5%;
+     color: white;
+     border-bottom: 2px solid white;
+     text-decoration: none;
+}
 }
