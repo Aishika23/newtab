@@ -43,6 +43,7 @@ input
     height: 45px;
     font-size: large;
     font-family: "Inter", sans-serif;
+    background-color: rgba(250, 235, 215, 0);
 }
 .image
 {
