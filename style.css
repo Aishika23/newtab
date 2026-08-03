@@ -73,6 +73,8 @@ input
     padding: 5px;
     font-family: "Raleway", sans-serif;
     text-align: center;
+    backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px)
 
     transition: background-color 0.3s ease-in-out;
     transition: height 0.3s ease-in-out;
