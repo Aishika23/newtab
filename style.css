@@ -7,44 +7,68 @@ body
 }
 .search_div
 {
+    display: flex;
     border-radius: 30px;
     width: 45%;
     height: 40px;
-    background-color: white;
-    padding-bottom: 10px;
+    background-color: rgba(10, 6, 6, 0.518);
+    padding: 10px;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.459) ;
     margin-top: 0cm;
-    padding-right: 10px;
-    border: solid;
-    border-width: 3px;
-    border-color: white;
 
+    justify-content: center;
+    
+    border: solid;
+    border-width: 2px;
+    border-color: rgba(250, 249, 249, 0.338);
+    backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+flex-direction: row;
     transition: border-color 0.2s ease-in-out;
+
+    vertical-align: middle;
     
 }
 button
 {
     border-radius: 30px;
-    background-image: url("search_icon.png");
+    
     height: 30px;
     width: 30px;
     background-size: cover;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0);
     border: 0cap;
-    padding: 13px;
+   
+    vertical-align: middle;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+
+ 
+
+}
+button .material-symbols-outlined {
+    color: rgba(205, 192, 192, 0.722);
+    line-height: 1;
+    border: 0cap;
+    transform: translateY(1px);
     
 }
+    
 input
 {
     border: 0cap;
     box-shadow: none;
     outline: 0cap;
     width: 90%;
-    height: 45px;
+    
     font-size: large;
     font-family: "Inter", sans-serif;
     background-color: rgba(250, 235, 215, 0);
 }
+
 .image
 {
     height: 100px;
@@ -52,6 +76,7 @@ input
     display: inline-block;
     background-size: cover;
     border-radius: 5px;
+    
 }
 #all_news
 {
@@ -75,7 +100,7 @@ input
     font-family: "Raleway", sans-serif;
     text-align: center;
     backdrop-filter: blur(7px);
-  -webkit-backdrop-filter: blur(7px)
+  -webkit-backdrop-filter: blur(7px);
 
     transition: background-color 0.3s ease-in-out;
     transition: height 0.3s ease-in-out;
