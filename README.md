@@ -7,7 +7,7 @@ I have also made different css for mobile and computer
 Demo url :- https://aishika23.github.io/newtab/
 <img width="1920" height="1080" alt="Screenshot (232)" src="https://github.com/user-attachments/assets/22815a9c-03f3-42dc-ba72-e7bb9e03e643" />
 In phone
-<img width="300" height="600" alt="WhatsApp Image 2026-08-04 at 5 24 11 PM" src="https://github.com/user-attachments/assets/a04c12f4-79af-4fce-b7a5-5f3b84060004" />
+<img width="365" height="600" alt="WhatsApp Image 2026-08-04 at 5 24 11 PM" src="https://github.com/user-attachments/assets/a04c12f4-79af-4fce-b7a5-5f3b84060004" />
 
 
 
