@@ -5,6 +5,7 @@ To make the search tab i used Google's link of google.com/search and then concat
 I used a little bit of ai (chatgpt) to help me with api since i am very new to it.
 I have also made different css for mobile and computer
 Demo url :- https://aishika23.github.io/newtab/
-<img width="1920" height="1080" alt="Screenshot (231)" src="https://github.com/user-attachments/assets/805f8f32-8843-49f9-8fe5-a3f591e28dfb" />
+<img width="1920" height="1080" alt="Screenshot (232)" src="https://github.com/user-attachments/assets/22815a9c-03f3-42dc-ba72-e7bb9e03e643" />
+
 
 
