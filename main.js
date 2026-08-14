@@ -1,3 +1,8 @@
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+       search();
+    }
+});
 function search()
 {
     request = document.getElementById("search_input").value;
@@ -5,6 +10,11 @@ function search()
     window.open("https://www.google.com/search?q="+request, "_blank");
 }
 
+let time = document.getElementById("current-time");
+setInterval(() => {
+   let d = new Date();
+   document.getElementById("current-time").innerHTML = d.toLocaleTimeString();
+},1000);
 
 fetch("https://api.nasa.gov/planetary/apod?api_key=gkskQ64DBd688IXX54MAx0czZKLCFoLbPW6Lv1ns")
 .then(response => response.json())
@@ -38,6 +48,7 @@ fetch("https://newsdata.io/api/1/latest?apikey=pub_e24609fef8744f52abe106bced183
             console.log(r.title);
             console.log(r.image_url);
             console.log(r.link);
+            
             document.getElementById("image"+j).style.backgroundImage = `url(${r.image_url})`;
             
             const news = document.getElementsByClassName("news");

@@ -5,6 +5,11 @@ body
     flex-direction: column;
     align-items: center;
 }
+#current-time
+{
+    font-size: 45px;
+    color: white;
+}
 .search_div
 {
     display: flex;
@@ -29,7 +34,7 @@ flex-direction: row;
     vertical-align: middle;
     
 }
-button
+#btn
 {
     border-radius: 30px;
     
@@ -136,11 +141,16 @@ h2
     
     width: 215px;
 }
-@media (max-width: 768px) {
+@media (max-width: 768px) { 
   body {
     background-size: cover;
     
 
+}
+#current-time
+{
+    font-size: 36px;
+    color: white;
 }
 #all_news
 {
