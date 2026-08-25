@@ -17,21 +17,17 @@ setInterval(() => {
 },1000);
 
 fetch("https://api.nasa.gov/planetary/apod?api_key=gkskQ64DBd688IXX54MAx0czZKLCFoLbPW6Lv1ns")
-.then(response => response.json())
-.then(data => {
-    console.log(data);
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
 
-    const date = data.date;
-    const Url = data.url;
-    if(data.media_type=="image"){
-    document.body.style.backgroundImage=`url(${Url})`;
-    console.log(Url);}
-    else{
-       document.body.style.backgroundImage=`url("bg1.jpg")`;
-    }
-}
-)
-.catch(error => console.error(error));
+        if (data.media_type === "image") {
+            document.body.style.backgroundImage = `url("${data.url}")`;
+        } else {
+            document.body.style.backgroundImage = `url("bg1.jpg")`;
+        }
+    })
+    .catch(error => console.error("Error:", error));
   
 
 fetch("https://newsdata.io/api/1/latest?apikey=pub_e24609fef8744f52abe106bced183c7e&q=global news&language=en&removeduplicate=1")
@@ -67,3 +63,24 @@ fetch("https://newsdata.io/api/1/latest?apikey=pub_e24609fef8744f52abe106bced183
         i++;
      }
 })
+//"https://www.google.com/s2/favicons?domain=${domain}&sz=${size}"
+
+const Domains = ['github.com', 'nasa.gov', 'youtube.com', 'spotify.com', 'google.com', 'whatsapp.com'];
+localStorage.setItem('domain', JSON.stringify(Domains));
+
+
+const storedData = localStorage.getItem('domain');
+
+
+const originalArray = JSON.parse(storedData);
+
+console.log(originalArray);
+for(let i = 0; i<6;i++)
+{
+    document.getElementById(`s${i}`).style.backgroundImage =
+        `url("https://www.google.com/s2/favicons?domain=${originalArray[i]}&sz=256")`;
+}
+function short(element) {
+    console.log(originalArray[element.id]);
+    window.open("https://www."+originalArray[element.id.slice(-1)], "_blank");
+}
