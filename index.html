@@ -9,25 +9,52 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&icon_names=search" />
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="style.css">
-      
-    </head>
+
+<link rel="stylesheet"
+href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&icon_names=search,close,settings">
+
+</head>
     <body class="bodish">
       
+      <button class="btn" id="settings" onclick="openPopup()"><span class="material-symbols-outlined" id="settings-icon">settings</span></button>
         
+      
+      <div id="popup">
+    <div id="popup-content">
+       
+        <button class="btn" id="close" onclick="closePopup()" ><span class="material-symbols-outlined" id="close-icon">close</span></button>
+    <h3 class="michroma-regular" id="edit">EDIT SHORTCUTS</h3>
+
+    <hr>
+
+    <span class="short-edit" ><h3>Shortcut 1:</h3><input class="edit-input" id="i0"></span>
+    <span class="short-edit" ><h3>Shortcut 2:</h3><input class="edit-input" id="i1"></span>
+    <span class="short-edit" ><h3>Shortcut 3:</h3><input class="edit-input" id="i2"></span>
+    <span class="short-edit" ><h3>Shortcut 4:</h3><input class="edit-input" id="i3"></span>
+    <span class="short-edit" ><h3>Shortcut 5:</h3><input class="edit-input" id="i4"></span>
+    <span class="short-edit" ><h3>Shortcut 6:</h3><input class="edit-input" id="i5"></span>
+
+    <hr>
+    
+    <button  id="save" onclick="update()">SAVE</button>
+      </div>
+</div>
+
+
         <div id="clock">
-          <h1 id="current-time" class="michroma-regular">hello</h1>
+          <h1 id="current-time" class="michroma-regular">time</h1>
         </div>
         
             <div class="search_div" align="right">
               
               <input id="search_input" placeholder="Search">
               
-              <button onclick="search()" id="btn">
+              <button onclick="search()" class="btn" id="btn">
                 <span class="material-symbols-outlined">search</span>
               </button>
 </div><br>

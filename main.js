@@ -10,6 +10,16 @@ function search()
     window.open("https://www.google.com/search?q="+request, "_blank");
 }
 
+function openPopup()
+{
+    document.getElementById("popup").classList.add("show");
+}
+
+function closePopup()
+{
+    document.getElementById("popup").classList.remove("show");
+}
+
 let time = document.getElementById("current-time");
 setInterval(() => {
    let d = new Date();
@@ -65,22 +75,47 @@ fetch("https://newsdata.io/api/1/latest?apikey=pub_e24609fef8744f52abe106bced183
 })
 //"https://www.google.com/s2/favicons?domain=${domain}&sz=${size}"
 
-const Domains = ['github.com', 'nasa.gov', 'youtube.com', 'spotify.com', 'google.com', 'whatsapp.com'];
-localStorage.setItem('domain', JSON.stringify(Domains));
+var Domains = ['github.com', 'discord.com', 'youtube.com', 'spotify.com', 'google.com', 'whatsapp.com'];
 
 
-const storedData = localStorage.getItem('domain');
 
+var storedData = localStorage.getItem('domain');
 
-const originalArray = JSON.parse(storedData);
+if (storedData == null) {
+    localStorage.setItem('domain', JSON.stringify(Domains));
+}
+else {
+    Domains = JSON.parse(storedData);
+}
 
-console.log(originalArray);
+console.log(Domains);
+
 for(let i = 0; i<6;i++)
 {
     document.getElementById(`s${i}`).style.backgroundImage =
-        `url("https://www.google.com/s2/favicons?domain=${originalArray[i]}&sz=256")`;
+        `url("https://www.google.com/s2/favicons?domain=${Domains[i]}&sz=256")`;
 }
+for(let i = 0; i<6;i++)
+{
+    document.getElementById(`i${i}`).value = Domains[i];
+}
+
+function update() {
+  for (let i = 0; i < 6; i++) {
+
+        Domains[i] = document.getElementById(`i${i}`).value;
+
+        document.getElementById(`s${i}`).style.backgroundImage =
+            `url("https://www.google.com/s2/favicons?domain=${Domains[i]}&sz=256")`;
+        console.log(Domains)
+    }
+
+    localStorage.setItem('domain', JSON.stringify(Domains));
+
+    document.getElementById("popup").classList.remove("show");
+}
+
 function short(element) {
-    console.log(originalArray[element.id]);
-    window.open("https://www."+originalArray[element.id.slice(-1)], "_blank");
+    console.log(Domains[element.id]);
+    window.open("https://"+Domains[element.id.slice(-1)], "_blank");
 }
